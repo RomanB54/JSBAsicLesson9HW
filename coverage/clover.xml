@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1737452215571" clover="3.2.0">
-  <project timestamp="1737452215572" name="All files">
+<coverage generated="1737452975454" clover="3.2.0">
+  <project timestamp="1737452975454" name="All files">
     <metrics statements="198" coveredstatements="127" conditionals="16" coveredconditionals="15" methods="14" coveredmethods="8" elements="228" coveredelements="150" complexity="0" loc="198" ncloc="198" packages="1" files="6" classes="6"/>
     <file name="getLocation.js" path="C:\Users\Roman\Desktop\Учеба\ДЗ\JavaScript Basic\Lesson 9 Homework\src\app\getLocation.js">
       <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
