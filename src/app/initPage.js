@@ -9,10 +9,10 @@ export function initPage(el) {
             <div class="layer3">
                 <p class="showWeather">Weather info</p>
                 <ul class=infoWeather>
-                <li class="InfoCity">
-                <li class="InfoTemp">
+                <li class="InfoCity">{{city}}</li>
+                <li class="InfoTemp">{{temperature}}</li>
                 </ul>
-                <div class = "iconWeather">
+                <div class = "iconWeather"><img src="https://openweathermap.org/img/wn/{{icon}}@2x.png">
                 </div>
             </div>
             <div class="layer4">

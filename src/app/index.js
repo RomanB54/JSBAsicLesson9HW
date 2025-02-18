@@ -62,15 +62,30 @@ export function loadHistoryList() {
   }
 }
 
-export function addWeather(weather) {
-  if (weather) {
-    document.querySelector('.InfoCity').innerText = `${weather.city}`;
-    document.querySelector('.InfoTemp').innerText = `${weather.temperature}`;
-    document.querySelector('.iconWeather').innerHTML =
-      `<img src="https://openweathermap.org/img/wn/` +
-      weather.icon +
-      `@2x.png">`;
-  }
+export function addWeatherTemplate(template, object) {
+  const pattern = /\{\{(\w+)}}/gm;
+  template = template.replace(pattern, (match, key) => {
+    if (key in object) {
+      return object[key];
+    } else {
+      return '';
+    }
+  });
+  return template;
+}
+
+export function addWeather(objectWeather) {
+  const template = document.querySelector('.layer3').innerHTML;
+  // if (object) {
+  // document.querySelector('.InfoCity').innerText = `${weather.city}`;
+  // document.querySelector('.InfoTemp').innerText = `${weather.temperature}`;
+  // document.querySelector('.iconWeather').innerHTML =
+  //   `<img src="https://openweathermap.org/img/wn/` +
+  //   weather.icon +
+  //   `@2x.png">`;
+  const updatedTemplate = addWeatherTemplate(template, objectWeather);
+  return updatedTemplate;
+  // }
 }
 
 export async function updateWeather(city) {
