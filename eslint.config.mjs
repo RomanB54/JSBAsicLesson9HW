@@ -9,8 +9,8 @@ export default [
       globals: globals.browser,
     },
     rules: {
-      'prefer-const': 'warn',
-      'no-unused-vars': 'warn',
+      'prefer-const': 'off',
+      'no-unused-vars': 'off',
       semi: 'error',
     },
   },
