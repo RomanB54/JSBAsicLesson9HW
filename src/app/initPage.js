@@ -7,13 +7,6 @@ export function initPage(el) {
                 <img class="fakePosition" src=''/>
             </div>
             <div class="layer3">
-                <p class="showWeather">Weather info</p>
-                <ul class=infoWeather>
-                <li class="InfoCity">{{city}}</li>
-                <li class="InfoTemp">{{temperature}}</li>
-                </ul>
-                <div class = "iconWeather"><img src="https://openweathermap.org/img/wn/{{icon}}@2x.png">
-                </div>
             </div>
             <div class="layer4">
                 <p class="showWeather">History</p>

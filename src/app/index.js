@@ -8,6 +8,7 @@ import {
 import { getLocation } from './getLocation.js';
 import { updateMap } from './map.js';
 import './style.css';
+import weatherBlock from './weatherBlockTemplate.html';
 export function inputCity(input) {
   const cityKey = 'citylist';
   const historyCity = getLocalStorageItem(cityKey);
@@ -75,17 +76,10 @@ export function addWeatherTemplate(template, object) {
 }
 
 export function addWeather(objectWeather) {
-  const template = document.querySelector('.layer3').innerHTML;
-  // if (object) {
-  // document.querySelector('.InfoCity').innerText = `${weather.city}`;
-  // document.querySelector('.InfoTemp').innerText = `${weather.temperature}`;
-  // document.querySelector('.iconWeather').innerHTML =
-  //   `<img src="https://openweathermap.org/img/wn/` +
-  //   weather.icon +
-  //   `@2x.png">`;
-  const updatedTemplate = addWeatherTemplate(template, objectWeather);
-  return updatedTemplate;
-  // }
+  document.querySelector('.layer3').innerHTML = addWeatherTemplate(
+    weatherBlock,
+    objectWeather,
+  );
 }
 
 export async function updateWeather(city) {
