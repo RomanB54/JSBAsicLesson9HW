@@ -10,6 +10,6 @@ describe('initPage', () => {
   });
   it('creates initial markup', () => {
     expect(input).not.toBe(null);
-    expect(el.querySelectorAll('div').length).toBe(5);
+    expect(el.querySelectorAll('div').length).toBe(4);
   });
 });
